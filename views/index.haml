@@ -3,11 +3,16 @@
 	%head
 		%title Unique cake
 		%script{:type => 'text/javascript', :src => "http://use.typekit.com/gar7vtm.js"}
-		%script{:type => 'text/javascript'} try{Typekit.load(); google.load("jquery", "1.5.1");}catch(e){}
+		%script{:type => 'text/javascript'} try { Typekit.load(); } catch(e) {}
+		%script{:type => 'text/javascript', :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
 		%script{:type => 'text/javascript', :src => 'js/form.js'}
 		%link{:type => 'text/css', :media => 'screen', :rel => 'stylesheet', :href => 'stylesheets/screen.css'}
 	%body
 		#wrapper
+			- if @notice
+				#notice
+					%p Thanks. Your request for the cake was sent. You will receive an answer very soon.
+					%p OH, do you smell this perfume? Seems it's already in the oven.
 			#recipe
 				%h1
 					Fancy a
@@ -53,6 +58,17 @@
 					Mouth-watering?
 					%br
 					%a{:href => '#'} Request it
+					%div
+						%form{:action => '/request_cake', :method => 'post'}
+							%p{:class => 'email'}
+								%label Your email address
+								%br
+								%input{:type => 'text', :name => 'email', :id => 'email'}
+							%p{:class => 'why'}
+								%label Why you want the cake
+								%br
+								%input{:type => 'text', :name => 'why', :id => 'why'}
+							%input{:type => 'submit'}
 				%div{:class => 'producer'}
 					%p
 						Pastry produced by

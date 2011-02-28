@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('a').click(function() {
+	$('.request a').click(function() {
 		return false;
 	})	
 })
