@@ -2,5 +2,8 @@ source :rubygems
 
 gem 'sinatra'
 gem 'haml'
-gem 'heroku'
 gem 'pony'
+
+group :development do
+  gem 'heroku'
+end
