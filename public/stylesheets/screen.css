@@ -24,10 +24,22 @@ ul {
 	margin-left: 3px;
 	list-style-type: square;
 }
-form p label, form p input, form input {
+form p label, form p input, form input, form p textarea {
 	font-size: 20px;
 	padding: 3px;
 	margin: 5px;
+	outline: none;
+}
+form p input, form p textarea {
+	width: 400px;
+	border: 3px solid #cccccc;
+}
+form p textarea {
+	height: 300px;
+	overflow: auto;
+}
+form input {
+	margin-top: 20px;
 }
 #wrapper {
 	width: 800px;
@@ -43,6 +55,9 @@ form p label, form p input, form input {
 	text-align: center;
 	margin-bottom: 20px;
 	background-color: white;
+}
+#request {
+	display: none;
 }
 .cleaner {
 	clear: both;

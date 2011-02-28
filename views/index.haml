@@ -58,17 +58,17 @@
 					Mouth-watering?
 					%br
 					%a{:href => '#'} Request it
-					%div
+					%div{:id => 'request'}
 						%form{:action => '/request_cake', :method => 'post'}
 							%p{:class => 'email'}
-								%label Your email address
+								%label{:for => 'email'} Your email address
 								%br
 								%input{:type => 'text', :name => 'email', :id => 'email'}
 							%p{:class => 'why'}
-								%label Why you want the cake
+								%label{:for => 'why'} Why you want the cake
 								%br
-								%input{:type => 'text', :name => 'why', :id => 'why'}
-							%input{:type => 'submit'}
+								%textarea{:name => 'why', :id => 'why'}
+							%input{:type => 'submit', :value => 'Want. That. CAKE.'}
 				%div{:class => 'producer'}
 					%p
 						Pastry produced by
