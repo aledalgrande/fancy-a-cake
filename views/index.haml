@@ -76,7 +76,7 @@
 						The cake taste is best when accompanied with this
 						%a{:href => 'http://dandemeyere.squarespace.com/blog/2011/2/28/working-for-a-start-up-expectations.html', :target => '_blank'} drink
 						in the course.
-	%a{:href => "http://github.com/aledalgrande/fancy-a-cake"}
-		%img{:style => "position: absolute; top: 0; right: 0; border: 0;", :src => "https://assets0.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_red_aa0000.png&path=", :alt => "Fork me on GitHub"}
-	- if ENV['RACK_ENV'].eql?('production')
-		%script{:type => 'text/javascript', :src => 'js/ga.js'}
+		%a{:href => "http://github.com/aledalgrande/fancy-a-cake"}
+			%img{:style => "position: absolute; top: 0; right: 0; border: 0;", :src => "https://assets0.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_red_aa0000.png&path=", :alt => "Fork me on GitHub"}
+		- if ENV['RACK_ENV'].eql?('production')
+			%script{:type => 'text/javascript', :src => 'js/ga.js'}
